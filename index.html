@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07111c">
+  <meta name="description" content="FinanceLab Analyst Workstation — evidence-based finance training through cases, models and evaluated reasoning.">
+  <meta property="og:title" content="FinanceLab Analyst Workstation">
+  <meta property="og:description" content="Learn finance by doing analyst work and proving mastery.">
+  <meta property="og:image" content="/og.png">
+  <title>FinanceLab · Analyst Workstation</title>
+  <link rel="icon" href="/favicon.svg">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/refinements.css">
+  <link rel="stylesheet" href="/mvp.css">
+  <link rel="stylesheet" href="/fund.css">
+</head>
+<body>
+  <a class="skipLink" href="#workspaceMain">Skip to workspace</a>
+  <aside class="sidebar" aria-label="Primary navigation">
+    <div class="brand"><div class="logo">FL</div><div><b>FinanceLab</b><span>Analyst Workstation</span></div></div>
+    <nav>
+      <label>WORKSPACE</label>
+      <button class="nav active" data-view="overview"><span class="navIcon">⌂</span><span>Overview</span></button>
+      <button class="nav" data-view="assignments"><span class="navIcon">▣</span><span>Assignments</span><em id="assignmentBadge">0</em></button>
+      <button class="nav" data-view="models"><span class="navIcon">▤</span><span>Models</span></button>
+      <button class="nav" data-view="research"><span class="navIcon">⌕</span><span>Research</span></button>
+      <label>DEVELOP</label>
+      <button class="nav" data-view="brief"><span class="navIcon">◐</span><span>Daily Brief</span></button>
+      <button class="nav" data-view="knowledge"><span class="navIcon">◫</span><span>Knowledge</span></button>
+      <button class="nav" data-view="skills"><span class="navIcon">◎</span><span>Skills & Path</span></button>
+      <button class="nav" data-view="practice"><span class="navIcon">↗</span><span>Practice</span></button>
+      <button class="nav" data-view="review"><span class="navIcon">◇</span><span>Development Review</span></button>
+      <label>MARKETS</label>
+      <button class="nav" data-view="fund"><span class="navIcon">◈</span><span>AI Fund</span></button>
+      <button class="nav" data-view="markets"><span class="navIcon">⌁</span><span>Market Scenarios</span></button>
+    </nav>
+    <div class="mini" id="profileMini"><div class="avatar">A</div><div><b>Analyst</b><span>Foundation · Explore Finance</span></div></div>
+    <button class="settings" data-view="settings">⚙ Settings</button>
+  </aside>
+
+  <main id="workspaceMain" tabindex="-1">
+    <header class="topbar">
+      <div><small>ANALYST WORKSPACE</small><h1 id="pageTitle">Overview</h1></div>
+      <div class="topActions">
+        <span class="session" id="sessionStatus"><i></i>Evidence session</span>
+        <button id="globalSearch" aria-label="Search FinanceLab">⌕</button>
+        <button id="latestEvidence" aria-label="Show latest evidence">◌</button>
+        <button class="avatar avatarButton" id="profileButton" aria-label="Open analyst profile">A</button>
+      </div>
+    </header>
+    <section id="appView" class="view activeView" aria-live="polite"></section>
+  </main>
+
+  <div class="modalOverlay hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modalCard" id="modalCard"></div>
+  </div>
+
+  <div class="modalOverlay hidden" id="onboarding" role="dialog" aria-modal="true" aria-labelledby="onboardTitle">
+    <div class="onboardCard" id="onboardCard"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
